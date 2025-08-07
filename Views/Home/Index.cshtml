@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="base">
+    <img src="/img/imagw.jpg" alt="">
+    <form asp-action="Index">
+        <input required name="userName" type="text" placeholder="UserName ..."><br>
+        <input required name="password" type="password" placeholder="Password ..."><br>
+        <button type="submit">Login</button>
+        @if (ViewBag.Status == "fail")
+        {
+            <p><b style="color:red">**کاربر یافت نشد**</b></p>
+        }
+    </form>
+    @*<a href="#">رمز عبور را فراموش کرده ام</a>*@
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "پنل ادمین";
+}
+
+<div class="container mt-5">
+    @if (Context.Request.Query["status"] == "success")
+    {
+        <div class="alert alert-success text-right">
+            <h3>عملیات با موفقیت انجام شد !</h3>
+        </div>
+    }
+</div>

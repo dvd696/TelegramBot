@@ -1,0 +1,37 @@
+﻿@model BotAdminPanel.Models.SendMessageViewModel
+<div class="container-fluid mt-4 d-flex justify-content-center" dir="rtl">
+    <div class="col col-md-8">
+        <form asp-action="SendMessage" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <h6 class="text-right mb-2">آیدی کانال یا گروه</h6>
+                <input asp-for="ChannelId" type="text" placeholder="مثال : YaminiAcademy" class="form-control">
+                <span asp-validation-for="ChannelId" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-4">
+                <h6 class="text-right">متن کلید شیشه ای (اختیاری)</h6>
+                <input asp-for="ButtonName" type="text" placeholder="مثال : درخواست مشاوره" class="form-control">
+            </div>
+            <div class="form-group text-right mt-4">
+                <h6 class="text-right">آدرس کلید شیشه ای(اگر کلید دارید حتما پرشود)</h6>
+                <input asp-for="ButtonLink" type="text" placeholder="مثال : yamin.com" class="form-control">
+                <span asp-validation-for="ButtonLink" class="text-danger"></span>
+                <span class="text-info">برای تلگرام از این فرمت استفاده کنید : t.me/Account Id</span><br/>
+                <span class="text-info">مثال : t.me/dvd696</span>
+            </div>
+            <div class="form-group mt-4">
+                <h6 class="text-right">متن پیام</h6>
+                <textarea asp-for="Description" class="form-control" style="height:250px" placeholder="توضیحات ..."></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="form-group text-right mt-4">
+                <h6 class="text-right">فایل (اختیاری)</h6>
+                <input asp-for="File" type="file" class="form-control"/>
+                <span class="text-secondary">میتوانید عکس  , ویدیو یا هر فایلی انتخاب کنید</span><br />
+                <span class="text-danger">*اگر به هیچکدام نیاز ندارید فایلی انتخاب نکنید</span>
+            </div>
+
+            <button type="submit" class="btn btn-success mb-5">ارسال</button>
+        </form>
+    </div>
+</div>
