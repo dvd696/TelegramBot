@@ -1,8 +1,11 @@
 {
   "app": "botbotbot",
-  "port": 3000,
+  "port": 80,
   "build": {
     "location": "iran"
   },
+  "dotnet":{
+    "version" : "7.0"
+  }
   "disks": []
 }
